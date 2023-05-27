@@ -5,6 +5,7 @@ export default defineConfig(() => {
     base: "./",
     build: {
       minify: false,
+      target: "es2015",
     }
   };
 });

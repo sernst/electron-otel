@@ -1,6 +1,6 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("electron", {
-  foo: () => ipcRenderer.invoke("foo"),
-  bar: () => ipcRenderer.invoke("bar"),
+  foo: (carrier) => ipcRenderer.invoke("foo", carrier),
+  bar: (carrier) => ipcRenderer.invoke("bar", carrier),
 });
